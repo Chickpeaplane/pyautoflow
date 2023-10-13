@@ -4,9 +4,9 @@ This library can control your keyboard and mouse to automate everyday tasks. It 
 
 ## Examples
 ```python
-# Import the two base modules
-from pyautoflow import controls, inputs
-
+# Import the three base modules
+from pyautoflow import controls, inputs, info
+from info import *
 
 # CONTROLS
 # Press the "a" key
@@ -73,9 +73,50 @@ start_recording("bar.mp4")
 
 # Stops the screen recording
 stop_recording()
+
+
+# INFO
+# Returns the CPU utilisation on each thread
+utilisation = cpu.percent()
+
+# Returns the number of CPU cores and threads
+cores, threads = cpu.count()
+
+# Returns info about the virtual RAM usage
+virtual_info = ram.virtual()
+
+# Returns info about the swap memory usage
+swap_info = ram.swap()
+
+# Returns info on all partitions detected
+partition_info = disks.partitions()
+
+# Returns info the main drive, such as the capacity used 
+disk_usage = disk.usage()
+
+# Returns a list of all processes currently running
+pids = pids.pids()
+
+# Returns a list of all of the IDs of currently running processes
+ids = pids.ids()
+
+# Returns info on the given ID
+pid_id = pids.lookup(ids[1])
+
+# Dumps all of the available info on the currently running processes to the terminal
+pids.get()
+
+# Returns info on the battery charge
+battery_info = other.battery()
+
+# Returns a list of all users on this device and some info
+users = other.users()
+
+# Returns the timestamp of the systems clock
+timestamp = other.time()
 ```
 
 ## TODO:
 - Text recognition
-- System information
 - Microphone and camera input
+- Power controls

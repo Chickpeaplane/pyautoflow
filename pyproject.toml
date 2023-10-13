@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyautoflow"
-version = "1.1.4"
+version = "1.2.0"
 authors = [
     {name = "Daniel Drury", email = "daniel-drury@outlook.com"},
 ]
@@ -25,6 +25,7 @@ dependencies = [
     "numpy",
     "opencv-python",
     "pyautogui",
+    "psutil",
 ]
 
 
