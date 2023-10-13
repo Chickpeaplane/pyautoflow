@@ -4,8 +4,8 @@ This library can control your keyboard and mouse to automate everyday tasks. It 
 
 ## Examples
 ```python
-# Import the three base modules
-from pyautoflow import controls, inputs, info
+# Import the four base modules
+from pyautoflow import controls, inputs, info, power
 from info import *
 
 # CONTROLS
@@ -114,9 +114,17 @@ users = other.users()
 
 # Returns the timestamp of the systems clock
 timestamp = other.time()
+
+
+# POWER
+# Shutdown the computer
+power.shutdown()
+
+# Reboot the computer
+power.reboot()
 ```
 
 ## TODO:
 - Text recognition
 - Microphone and camera input
-- Power controls
+- More advanced power controls
